@@ -1,0 +1,26 @@
+td {
+    height: 60px;
+    line-height: 60px;
+    padding: 10px;
+    text-align: center;
+    font-size: 25px;
+}
+
+button.delete_btn {
+      width: 100px;
+      height: 40px;
+      background-color: #fff;
+      color: red;
+      text-align: 40px;
+      font-size: 20px;
+      border: 1px solid red;
+      border-top-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      cursor: pointer;
+      outline: none;
+}
+
+button.delete_btn:hover {
+      color: #fff;
+      background-color: red;
+}
