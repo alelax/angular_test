@@ -1,0 +1,27 @@
+table{
+    width: 90%;
+    margin: 0 auto;
+}
+caption {
+    height: 70px;
+    line-height: 70px;
+    font-size: 40px;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+thead th {
+    height: 85px;
+    font-size: 33px;
+    background-color: limegreen;
+    color: #fff;
+}
+
+tr {
+    height: 60px;
+    line-height: 60px;
+    padding: 10px;
+    text-align: center;
+    font-size: 25px;
+}
+

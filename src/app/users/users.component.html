@@ -1,0 +1,21 @@
+<table>
+  <caption id="caption"> {{title}} </caption>
+  <thead>
+    <th>Nome</th>
+    <th>Cognome</th>
+    <th>Codice fiscale</th>
+    <th>Provincia</th>
+    <th>Telefono</th>
+  </thead>
+
+  
+  <tr *ngFor="let user of users">
+    <td>{{user.name}}</td>
+    <td>{{user.lastname}}</td>
+    <td>{{user.fiscalcode}}</td>
+    <td>{{user.province}}</td>
+    <td>{{user.phone}}</td>
+  </tr>
+
+</table>
+
