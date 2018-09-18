@@ -20,4 +20,9 @@ export class UsersComponent implements OnInit {
     this.users = this.service.getUsers();
   }
 
+  onDeleteUser(user) {
+    this.service.deleteUser(user);
+  }
+
+
 }

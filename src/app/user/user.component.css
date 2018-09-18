@@ -6,7 +6,7 @@ td {
     font-size: 25px;
 }
 
-button.delete_btn {
+button.delete_btn, button.update_btn {
       width: 100px;
       height: 40px;
       background-color: #fff;
@@ -18,9 +18,20 @@ button.delete_btn {
       border-bottom-right-radius: 10px;
       cursor: pointer;
       outline: none;
+      margin: 0 5px;
 }
 
-button.delete_btn:hover {
+button.delete_btn:hover, button.update_btn:hover {
       color: #fff;
       background-color: red;
+}
+
+button.update_btn {
+      color: limegreen;
+      border: 1px solid limegreen;
+}
+
+button.update_btn:hover {
+      color: #fff;
+      background-color: limegreen;
 }

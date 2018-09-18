@@ -1,0 +1,19 @@
+.main {
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.users_list {
+  width: 70%;
+  margin-right: 2%;
+  float: left;
+}
+
+.user_detail_form {
+  width: 25%;
+  float: left;
+}
+
+
