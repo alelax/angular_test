@@ -2,10 +2,12 @@
 
 <div class="main">
   <div class="users_list">
-    <app-users></app-users>
+    <app-users
+      (userSelected) = "userSelected($event)">
+    </app-users>
   </div>
   
-  <div class="user_detail_form" *ngIf="">
+  <div class="user_detail_form" *ngIf="toUpdateUser">
     <app-user-detail></app-user-detail>
   </div>
 </div>

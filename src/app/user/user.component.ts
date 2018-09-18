@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { UserService } from '../users/user.service';
+import { UserService } from '../services/user.service';
+import { User } from '../interfaces/user';
 
 @Component({
   /* inputs : [
@@ -15,13 +16,14 @@ export class UserComponent implements OnInit {
     altro modo per definire una variabile come input 
     e assegnarle un alias 
   */
-  @Input('user-data') user; 
+  @Input('user-data') user : User; 
 
   /*
     Definire una variabile come output è necessario per emettere un
     evento creato da noi, dobbiamo inoltre inizializzarla con l'evento. 
   */
   @Output('onDeleteUser') userDeleted = new EventEmitter();
+  @Output('onSelectUser') userSelected = new EventEmitter();
 
   
 
@@ -42,5 +44,11 @@ export class UserComponent implements OnInit {
   deleteUser() {
     this.userDeleted.emit(this.user);
   }
+
+  updateUser() {
+    this.userSelected.emit(this.user);
+  }
+
+
 
 }
