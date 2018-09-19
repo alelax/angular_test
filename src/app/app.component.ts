@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { User } from './interfaces/user';
+import { UserInterface } from './interfaces/userInterface';
 import { log } from 'util';
+import { User } from './classes/User';
 
 @Component({
   selector: 'app-root',
@@ -9,11 +10,16 @@ import { log } from 'util';
 })
 export class AppComponent {
   title = 'UMS';
-  toUpdateUser : User;
+  toUpdateUser: User = new User();
+  showForm: boolean = false;
 
   userSelected(user: User) {
+    this.showForm = true;
     this.toUpdateUser = user;
-    console.log(this.toUpdateUser);
+  }
+
+  toHideForm() {
+    this.showForm = false;
   }
 
 }

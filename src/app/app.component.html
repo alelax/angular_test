@@ -7,8 +7,11 @@
     </app-users>
   </div>
   
-  <div class="user_detail_form" *ngIf="toUpdateUser">
-    <app-user-detail></app-user-detail>
+  <div class="user_detail_form" *ngIf="showForm">
+    <app-user-detail 
+      [user]="toUpdateUser"
+      [hideForm]="toHideForm()">
+    </app-user-detail>
   </div>
 </div>
 

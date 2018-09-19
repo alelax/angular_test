@@ -1,26 +1,27 @@
+<!-- {{ user | json }} -->
 <form action="" method="post">
   <div class="form-group">
     <label for="firstname">Nome: </label>
-    <input type="text" name="firstname" id="firstname">
+    <input type="text" name="firstname" id="firstname" [(ngModel)]="user.name">
   </div>
   <div class="form-group">
     <label for="lastname">Cognome: </label>
-    <input type="text" name="lastname" id="lastname">
+    <input type="text" name="lastname" id="lastname" [(ngModel)]="user.lastname">
   </div>
   <div class="form-group">
     <label for="fiscalcode">Codice fiscale: </label>
-    <input type="text" name="fiscalcode" id="fiscalcode">
+    <input type="text" name="fiscalcode" id="fiscalcode" [(ngModel)]="user.fiscalcode">
   </div>
   <div class="form-group">
     <label for="province">Provincia: </label>
-    <input type="text" name="province" id="province">
+    <input type="text" name="province" id="province" [(ngModel)]="user.province">
   </div>
   <div class="form-group">
     <label for="telephone">Telefono: </label>
-    <input type="text" name="telephone" id="telephone">
+    <input type="text" name="telephone" id="telephone" [(ngModel)]="user.phone">
   </div>
   <div class="form-group">
-    <button class="cancel-btn form-action-btn">X</button>
-    <button class="save-btn form-action-btn">Save</button>
+    <button class="cancel-btn form-action-btn" (click)="cancel()">X</button>
+    <button class="save-btn form-action-btn" (click)="saveUser()">Save</button>
   </div>
 </form>
