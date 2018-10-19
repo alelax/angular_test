@@ -1,7 +1,7 @@
-import { Component, OnInit, Input, Output } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { UserInterface } from '../interfaces/userInterface';
+import { UserService } from '../services/user.service';
 import { User } from '../classes/User';
-import { EventEmitter } from 'events';
 
 @Component({
   selector: 'app-user-detail',
@@ -14,17 +14,16 @@ export class UserDetailComponent implements OnInit {
 
   @Output('hideForm') hideForm = new EventEmitter();
 
-  constructor() { }
+  constructor(private userService: UserService) { }
 
   ngOnInit() {
   }
 
   saveUser() {
-    alert(this.user.id);
+    this.userService.updateUser(this.user)
   }
 
   cancel() {
-    let toHide = false;
     this.hideForm.emit('false');
   }
 

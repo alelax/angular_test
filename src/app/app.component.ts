@@ -18,7 +18,7 @@ export class AppComponent {
     this.toUpdateUser = user;
   }
 
-  toHideForm() {
+  toHideForm(hide) {
     this.showForm = false;
   }
 

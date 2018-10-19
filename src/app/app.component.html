@@ -10,7 +10,7 @@
   <div class="user_detail_form" *ngIf="showForm">
     <app-user-detail 
       [user]="toUpdateUser"
-      [hideForm]="toHideForm()">
+      (hideForm)="toHideForm($event)">
     </app-user-detail>
   </div>
 </div>

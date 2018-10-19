@@ -36,14 +36,32 @@ export class UserService {
 
   constructor() { }
 
-  getUsers(){
+  getUsers() {
     return this.users;
   }
 
-  deleteUser(user){
+  deleteUser(user) {
     let index = this.users.indexOf(user);
     if (index >= 0) {
       this.users.splice(index, 1);
     }
+  }
+
+  updateUser(user) {
+    console.log(user);
+    
+    let index = this.users.indexOf(user)
+    console.log(index);
+    
+    let userToUpdate = this.users[0]
+
+    console.log('dati attuali: ');
+    console.log(userToUpdate);
+
+    console.log('dati modificati: ');
+    console.log(user);
+    
+    userToUpdate = user
+    
   }
 }

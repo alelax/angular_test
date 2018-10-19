@@ -29,7 +29,8 @@ export class UsersComponent implements OnInit {
   }
 
   onSelectUser(user: User) {
-    this.userSelected.emit(user);
+    const userCopy = Object.assign({},user) //copia l'oggetto user in un altro oggetto, in questo caso un oggettp vuoto {}
+    this.userSelected.emit(userCopy); 
   }
 
 
